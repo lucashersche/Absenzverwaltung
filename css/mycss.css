@@ -1,0 +1,62 @@
+/* 
+    Filename   : index.css
+    Created on : 22.10.2019, 10:44:29
+    Author     : 1039977
+*/
+
+* {
+    margin: 0;
+}
+
+* {
+  outline: none;
+}
+
+.content{
+    margin-left: auto;
+    margin-top: 100px;
+    text-align: center;
+    
+}
+
+
+body {
+
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
+h1{
+    padding-top: 50px;
+    text-align: center;
+    
+}
+
+p{
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+header {
+  
+}
+
+nav {
+
+}
+
+main {
+
+}
+
+footer {
+
+}
