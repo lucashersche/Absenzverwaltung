@@ -39,6 +39,27 @@ and open the template in the editor.
                 <div class="tab-pane container fade" id="gekleart">kopf</div>
             </div>
 
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ungeklärte Absenzen</h5>
+                            <p class="card-text">ardi lelek</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Geklärte Absenzen</h5>
+                            <p class="card-text">Ardi kein lelek</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
         <!-- Optional JavaScript -->
