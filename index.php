@@ -27,12 +27,8 @@ and open the template in the editor.
                 Hier kann text angezeigt werden
             </p>
 
-            <!-- Hier muss eine Buttongroup mit den verschiedenen Monaten erstellt werden.-->
-
-            <!-- Die Karte muss hier hinzugefügt werden.-->
-
-            <!-- Hier kommt das rechstliche der Website nach der Karte.-->
-
+            <button type="button" class="btn btn-primary">Primary</button>
+            <p>hure</p>
         </div>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
