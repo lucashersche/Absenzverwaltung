@@ -23,12 +23,23 @@ and open the template in the editor.
             <br>
             <hr>
             <br>
-            <p>
-                Hier kann text angezeigt werden
-            </p>
 
-            <button type="button" class="btn btn-primary">Primary</button>
-            <p>hure</p>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#ungeklaert">Ungeklärte Absenzen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#gekleart">Geklärte Absenzen</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane container active" id="ungeklaert">kari</div>
+                <div class="tab-pane container fade" id="gekleart">kopf</div>
+            </div>
+
+
         </div>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
