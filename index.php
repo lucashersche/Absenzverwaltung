@@ -23,14 +23,14 @@ and open the template in the editor.
             <br>
             <hr>
             <br>
-            
+
             <nav class="nav nav-pills nav-justified">
-            <a class="nav-item nav-link active" href="index.php">Absenz</a>
-            <a class="nav-item nav-link " href="schueler.php">Schüler</a>
-            <a class="nav-item nav-link " href="kari.php">Kari</a>
-            <a class="nav-item nav-link " href="kopf.php">Kopf</a>
+                <a class="nav-item nav-link active" href="index.php">Absenz</a>
+                <a class="nav-item nav-link " href="schueler.php">Schüler</a>
+                <a class="nav-item nav-link " href="kari.php">Kari</a>
+                <a class="nav-item nav-link " href="kopf.php">Kopf</a>
             </nav>
-            
+
             <br>
             <hr>
             <br>
@@ -56,6 +56,34 @@ and open the template in the editor.
                 </div>
             </div>
 
+            <?php
+            $dbdir = '/develop/xampp/db';
+            /* Datenbankdatei ausserhalb htdocs öffnen bzw. erzeugen */
+            $db = new SQLite3("$dbdir/sq3.db");
+
+            /* Tabelle mit Primärschlüssel erzeugen */
+            $db->exec("CREATE TABLE personen (name, vorname, "
+                    . "personalnummer INTEGER PRIMARY KEY, gehalt, geburtstag);");
+
+            /* Drei Datensätze eintragen */
+            $sqlstr = "INSERT INTO personen (name, vorname, " . "personalnummer, gehalt, geburtstag) VALUES ";
+            $db->query($sqlstr . "('Maier', 'Hans', 6714, 3500, '1962-03-15')");
+            $db->query($sqlstr . "('Schmitz', 'Peter', 81343, 3750, '1958-04-12')");
+            $db->query($sqlstr . "('Mertens', 'Julia', 2297, 3621.5, '1959-12-30')");
+
+            $res = $db->query("SELECT * FROM personen");
+
+            /* Abfrageergebnis ausgeben */
+            while ($dsatz = $res->fetchArray(SQLITE3_ASSOC)) {
+                echo $dsatz["name"] . ", "
+                . $dsatz["vorname"] . ", "
+                . $dsatz["personalnummer"] . ", "
+                . $dsatz["gehalt"] . ", "
+                . $dsatz["geburtstag"] . "<br>";
+            }
+            /* Verbindung zur Datenbankdatei wieder lösen */
+            $db->close();
+            ?>
 
         </div>
         <!-- Optional JavaScript -->
