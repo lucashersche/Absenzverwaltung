@@ -25,8 +25,8 @@ and open the template in the editor.
             <br>
             
             <nav class="nav nav-pills nav-justified">
-            <a class="nav-item nav-link active" href="index.php">Absenz</a>
-            <a class="nav-item nav-link " href="schueler.php">Schüler</a>
+            <a class="nav-item nav-link " href="index.php">Absenz</a>
+            <a class="nav-item nav-link active" href="schueler.php">Schüler</a>
             <a class="nav-item nav-link " href="kari.php">Kari</a>
             <a class="nav-item nav-link " href="kopf.php">Kopf</a>
             </nav>
@@ -39,7 +39,7 @@ and open the template in the editor.
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Ungeklärte Absenzen</h5>
+                            <h5 class="card-title">Schüler hinzufügen</h5>
                             <p class="card-text">ardi lelek</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
@@ -48,7 +48,7 @@ and open the template in the editor.
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Geklärte Absenzen</h5>
+                            <h5 class="card-title">Schüler bearbeiten</h5>
                             <p class="card-text">Ardi kein lelek</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
