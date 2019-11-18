@@ -57,32 +57,45 @@ and open the template in the editor.
             </div>
 
             <?php
+            
             $dbdir = '/develop/xampp/db';
             /* Datenbankdatei ausserhalb htdocs öffnen bzw. erzeugen */
             $db = new SQLite3("$dbdir/sq3.db");
 
             /* Tabelle mit Primärschlüssel erzeugen */
-            $db->exec("CREATE TABLE personen (name, vorname, "
+            $db->exec("CREATE TABLE TSchueler (Schuelernummer INTEGER PRIMARY KEY, "
+                    . "Vorname, Nachname, Geburtsdatum, Adresse, PLZ, Ort, "
+                    . "Telefonnummer, KlassenId);");
+            /*$db->exec("CREATE TABLE TKlassen (KlassenId, vorname, "
                     . "personalnummer INTEGER PRIMARY KEY, gehalt, geburtstag);");
+            $db->exec("CREATE TABLE TAbsenzen (name, vorname, "
+                    . "personalnummer INTEGER PRIMARY KEY, gehalt, geburtstag);");*/
+            
+            
 
             /* Drei Datensätze eintragen */
-            $sqlstr = "INSERT INTO personen (name, vorname, " . "personalnummer, gehalt, geburtstag) VALUES ";
-            $db->query($sqlstr . "('Maier', 'Hans', 6714, 3500, '1962-03-15')");
-            $db->query($sqlstr . "('Schmitz', 'Peter', 81343, 3750, '1958-04-12')");
-            $db->query($sqlstr . "('Mertens', 'Julia', 2297, 3621.5, '1959-12-30')");
+            $sqlstr = "INSERT INTO TSchueler (Schuelernummer, Vorname, Nachname, Geburtsdatum, Adresse, PLZ, Ort, Telefonnummer, KlassenId ) VALUES ";
+            $db->query($sqlstr . "(0, 'Lucas', 'Hersche', '2002-02-15', 'Thundorferstrasse 10', 8512, 'Wetzikon', 0799409425, '3i')");
+            $db->query($sqlstr . "(1, 'Marlon', 'Schmidheiny', '2001-08-04', 'Aadorferstrasse 10', 9414, 'Wängi', 0523761185, '3i')");
+            $db->query($sqlstr . "(2, 'Altin', 'Palushaj', '2001-02-21', 'Weinfelderstrasse 10', 8520, 'Weinfelden', 0768952326, '3i')");
 
-            $res = $db->query("SELECT * FROM personen");
+            $res = $db->query("SELECT * FROM TSchueler");
 
             /* Abfrageergebnis ausgeben */
             while ($dsatz = $res->fetchArray(SQLITE3_ASSOC)) {
-                echo $dsatz["name"] . ", "
-                . $dsatz["vorname"] . ", "
-                . $dsatz["personalnummer"] . ", "
-                . $dsatz["gehalt"] . ", "
-                . $dsatz["geburtstag"] . "<br>";
+                echo $dsatz["Schuelernummer"] . ", "
+                . $dsatz["Vorname"] . ", "
+                . $dsatz["Nachname"] . ", "
+                . $dsatz["Geburtsdatum"] . ", "
+                . $dsatz["Adresse"] . ", "
+                . $dsatz["PLZ"] . ", "
+                . $dsatz["Ort"] . ", "
+                . $dsatz["Telefonnummer"] . ", "
+                . $dsatz["KlassenId"] . "<br>";
             }
             /* Verbindung zur Datenbankdatei wieder lösen */
             $db->close();
+            
             ?>
 
         </div>

@@ -23,13 +23,55 @@ and open the template in the editor.
             <br>
             <hr>
             <br>
-            
+
             <nav class="nav nav-pills nav-justified">
-            <a class="nav-item nav-link " href="index.php">Absenz</a>
-            <a class="nav-item nav-link " href="schueler.php">Schüler</a>
-            <a class="nav-item nav-link active" href="kari.php">Kari</a>
-            <a class="nav-item nav-link " href="kopf.php">Kopf</a>
+                <a class="nav-item nav-link " href="index.php">Absenz</a>
+                <a class="nav-item nav-link " href="schueler.php">Schüler</a>
+                <a class="nav-item nav-link active" href="kari.php">Kari</a>
+                <a class="nav-item nav-link " href="kopf.php">Kopf</a>
             </nav>
+            
+            <br>
+            <hr>
+            <br>
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Schuelernummer</th>
+                        <th scope="col">Vorname</th>
+                        <th scope="col">Nachname</th>
+                        <th scope="col">Geburtsdatum</th>
+                        <th scope="col">Adresse</th>
+                        <th scope="col">PLZ</th>
+                        <th scope="col">Ort</th>
+                        <th scope="col">Telefonnummer</th>
+                        <th scope="col">KlassenId</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+
 
         </div>
         <!-- Optional JavaScript -->
